@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webnew</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffdde1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #ff5e78;
+            text-align: center;
+        }
+        button {
+            background-color: #ff5e78;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff416c;
+        }
+        #response {
+            margin-top: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        let clickCount = 0;
+
+        function showLoveMessage() {
+            clickCount++;
+            const responseDiv = document.getElementById("response");
+
+            if (clickCount === 5) {
+                responseDiv.innerHTML = `
+                    <p>Aku juga sayang kamu! ❤️</p>
+                    <img src="love.png">
+                `;
+            } else if (clickCount < 5) {
+                responseDiv.innerHTML = `<p>Hmmm, yang benerrrr?Klik lagi ya!</p>`;
+            }
+        }
+
+        function breakupMessage() {
+            const responseDiv = document.getElementById("response");
+            responseDiv.innerHTML = `
+                <p>Kita putus 😭</p>
+                <img src="1.png">
+            `;
+        }
+    </script>
+</head>
+<body>
+    <h1>Kamu sayang aku apa tidak? 🥰</h1>
+    <button onclick="showLoveMessage()">Sayang</button>
+    <button onclick="breakupMessage()">Tidak</button>
+    <div id="response"></div>
+</body>
+</html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>JAWAB JUJUR!</title>
+</head>
+<body>
+  <h1>
+    JAWAB JUJUR!
+  </h1>
+</body>
+</html>
